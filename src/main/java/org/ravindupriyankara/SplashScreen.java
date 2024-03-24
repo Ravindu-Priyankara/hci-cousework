@@ -41,21 +41,41 @@ public class SplashScreen extends JFrame{
         //set background color
         setBackground(Color.BLACK);
 
+        // Create background panel
+        JPanel backgroundPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Draw background image
+                g.drawImage(backgroundImage.getImage(), 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+        backgroundPanel.setLayout(null); // Use null layout for precise component positioning
+        backgroundPanel.setSize(900, 600); // Set size to match frame size
+        add(backgroundPanel);
+
         // Create a JLabel with the background image
-        JLabel backgroundLabel = new JLabel(backgroundImage);
-        backgroundLabel.setLayout(new BorderLayout());
-        add(backgroundLabel, BorderLayout.CENTER);
+        //JLabel backgroundLabel = new JLabel(backgroundImage);
+        //backgroundLabel.setLayout(new BorderLayout());
+        //add(backgroundLabel, BorderLayout.CENTER);
         // Resize the background image to fit the splash screen window
-        backgroundLabel.setPreferredSize(new Dimension(getWidth(), getHeight()));
+        //backgroundLabel.setPreferredSize(new Dimension(getWidth(), getHeight()));
+
+        //add progressbar label
+        JLabel progressbarLabel = new JLabel("test");
+        progressbarLabel.setForeground(Color.WHITE);
+        progressbarLabel.setBounds(10, 300, progressbarLabel.getPreferredSize().width, progressbarLabel.getPreferredSize().height);
+        backgroundPanel.add(progressbarLabel);
 
         //Add progressbar
-
-
         progressBar = new JProgressBar(0,100);
         progressBar.setPreferredSize(new Dimension(progressBar.getPreferredSize().width,10));
         progressBar.setStringPainted(true);//enable percentage
+        progressBar.setForeground(Color.WHITE);
         setProgressBarColors(progressBar); // Set custom colors
-        add(progressBar,BorderLayout.SOUTH);
+        //add(progressBar,BorderLayout.SOUTH);
+        progressBar.setBounds(0, 580, 900, 10); // Position at the bottom of the frame
+        backgroundPanel.add(progressBar);
 
         //set default closing operator
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -93,7 +113,7 @@ public class SplashScreen extends JFrame{
     private void setProgressBarColors(JProgressBar progressBar) {
         progressBar.setUI(new BasicProgressBarUI() {
             protected Color getSelectionBackground() {
-                return Color.black;
+                return Color.white;
             }
 
             protected Color getSelectionForeground() {
