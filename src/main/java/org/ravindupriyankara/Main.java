@@ -30,5 +30,8 @@ public class Main {
 
         // Close the splash screen when the task is complete
         splashScreen.dispose();
+
+        login login = new login();// create class object
+        login.display();//call login class after close splashScreen
     }
 }
