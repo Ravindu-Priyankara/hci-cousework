@@ -24,10 +24,14 @@ public class Main {
             // Calculate progress percentage
             int progress = (int) ((double) step / totalSteps * 100);
             splashScreen.setProgress(progress);
+            splashScreen.setProgressLabel(progress);
             step++;
         }
 
         // Close the splash screen when the task is complete
         splashScreen.dispose();
+
+        login login = new login();// create class object
+        login.display();//call login class after close splashScreen
     }
 }
