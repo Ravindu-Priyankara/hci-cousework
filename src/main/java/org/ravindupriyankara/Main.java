@@ -2,6 +2,7 @@ package org.ravindupriyankara;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         //create object for splashscreen
         SplashScreen splashScreen = new SplashScreen();
         //call display function inside splashscreen
@@ -29,7 +30,7 @@ public class Main {
         }
 
         // Close the splash screen when the task is complete
-        splashScreen.dispose();
+        splashScreen.dispose();*/
 
         login login = new login();// create class object
         login.display();//call login class after close splashScreen
