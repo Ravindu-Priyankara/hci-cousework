@@ -24,6 +24,7 @@ public class Main {
             // Calculate progress percentage
             int progress = (int) ((double) step / totalSteps * 100);
             splashScreen.setProgress(progress);
+            splashScreen.setProgressLabel(progress);
             step++;
         }
 

@@ -8,11 +8,14 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Objects;
 
 public class SplashScreen extends JFrame{
     private final ImageIcon backgroundImage;
     private JProgressBar progressBar;
+    private JLabel progressbarLabel,logoLabel;
+    private ImageIcon logo; //logo
     //create constructor for initializeUi
     public SplashScreen() {
         try {
@@ -61,10 +64,20 @@ public class SplashScreen extends JFrame{
         // Resize the background image to fit the splash screen window
         //backgroundLabel.setPreferredSize(new Dimension(getWidth(), getHeight()));
 
+        // add logo
+        logo = new ImageIcon(getClass().getResource("/logo.png"));
+        logoLabel = new JLabel(logo);
+        int logoWidth = logo.getIconWidth();
+        int logoHeight = logo.getIconHeight();
+        int logoX = (backgroundPanel.getWidth() - logoWidth) / 2 ;
+        int logoY = (backgroundPanel.getHeight() - logoHeight) / 2;
+        logoLabel.setBounds(logoX, logoY, logoWidth, logoHeight);
+        backgroundPanel.add(logoLabel);
+
         //add progressbar label
-        JLabel progressbarLabel = new JLabel("test");
+        progressbarLabel = new JLabel("Gathering stardust and dreams...");
         progressbarLabel.setForeground(Color.WHITE);
-        progressbarLabel.setBounds(10, 300, progressbarLabel.getPreferredSize().width, progressbarLabel.getPreferredSize().height);
+        progressbarLabel.setBounds(10, 560, progressbarLabel.getPreferredSize().width, progressbarLabel.getPreferredSize().height);
         backgroundPanel.add(progressbarLabel);
 
         //Add progressbar
@@ -120,5 +133,19 @@ public class SplashScreen extends JFrame{
                 return Color.black;
             }
         });
+    }
+
+    //set progressbar label changer
+    public void setProgressLabel(int value){
+
+        String[] data = {"Loading... Patience is a virtue!", "Assembling pixels and code into magic...", "One moment while we ignite the engines...",
+                "Brewing creativity, just for you...", "Loading... Unraveling mysteries of the digital realm...", "Hold tight, we're forging your experience...",
+                "Reticulating splines... just kidding, but almost there!", "Inhale... Exhale... Loading complete!", "Assembling the universe, one line of code at a time...",
+                "Done ....."};
+
+        if ((value & 10) == 0 && value >= 10){
+            int head = (value / 10) - 1;
+            progressbarLabel.setText(data[head]);
+        }
     }
 }
