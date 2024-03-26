@@ -194,7 +194,7 @@ public class userDashboard extends JFrame {
 
         // fernitures
         ImageIcon fernitureImage = new ImageIcon(getClass().getResource("/product.png"));
-        fernitureImage = resizeImageIcon(fernitureImage, 30, 30);
+        fernitureImage = resizeImageIcon(fernitureImage, 35, 35);
 
         //Add fernitures button
         JButton fernitureButton = new JButton(fernitureImage);
@@ -207,15 +207,54 @@ public class userDashboard extends JFrame {
         navigationPanel.add(fernitureButton);
 
         //fernitures button function
-        dashButton.addMouseListener(new MouseAdapter() {
+        fernitureButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e); // functions here
             }
         });
         //offers
+        ImageIcon offerImage = new ImageIcon(getClass().getResource("/offer.png"));
+        offerImage = resizeImageIcon(offerImage, 35, 35);
 
+        //Add offers button
+        JButton offerButton = new JButton(offerImage);
+        offerButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        offerButton.setOpaque(false);
+        offerButton.setBorder(null);
+        offerButton.setBounds(0, 210, 50, 50);
+        offerButton.setFocusPainted(false); // Remove the focus border
+        offerButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(offerButton);
+
+        //offers button function
+        offerButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //new arrivals
+        ImageIcon arrivalImage = new ImageIcon(getClass().getResource("/new-arrivals.png"));
+        arrivalImage = resizeImageIcon(arrivalImage, 35, 35);
+
+        //Add offers button
+        JButton arrivalButton = new JButton(arrivalImage);
+        arrivalButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        arrivalButton.setOpaque(false);
+        arrivalButton.setBorder(null);
+        arrivalButton.setBounds(0, 280, 50, 50);
+        arrivalButton.setFocusPainted(false); // Remove the focus border
+        arrivalButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(arrivalButton);
+
+        //offers button function
+        arrivalButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //notifications
         //mails
         //contacts us
