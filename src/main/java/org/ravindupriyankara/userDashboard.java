@@ -170,6 +170,63 @@ public class userDashboard extends JFrame {
         navlogotextLabel.setBounds(0,0,0,0);
         navigationPanel.add(navlogotextLabel);
 
+        // Dashboard logo
+        ImageIcon dashImage = new ImageIcon(getClass().getResource("/dashboard.png"));
+        dashImage = resizeImageIcon(dashImage, 30, 30);
+
+        //Add dash button
+        JButton dashButton = new JButton(dashImage);
+        dashButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        dashButton.setOpaque(false);
+        dashButton.setBorder(null);
+        dashButton.setBounds(0, 70, 50, 50);
+        dashButton.setFocusPainted(false); // Remove the focus border
+        dashButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(dashButton);
+
+        //dashboard button function
+        dashButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
+
+        // fernitures
+        ImageIcon fernitureImage = new ImageIcon(getClass().getResource("/product.png"));
+        fernitureImage = resizeImageIcon(fernitureImage, 30, 30);
+
+        //Add fernitures button
+        JButton fernitureButton = new JButton(fernitureImage);
+        fernitureButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        fernitureButton.setOpaque(false);
+        fernitureButton.setBorder(null);
+        fernitureButton.setBounds(0, 140, 50, 50);
+        fernitureButton.setFocusPainted(false); // Remove the focus border
+        fernitureButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(fernitureButton);
+
+        //fernitures button function
+        dashButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
+        //offers
+
+        //new arrivals
+        //notifications
+        //mails
+        //contacts us
+        //settings
+        //admin
+        //logout
+        //if you can add theme changer
+
+
+
+
 
         backgroundPanel.add(headerPanel);
         backgroundPanel.add(navigationPanel);
