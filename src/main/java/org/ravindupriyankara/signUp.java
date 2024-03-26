@@ -32,14 +32,7 @@ public class signUp extends JFrame{
         setUndecorated(true);
 
         // Create background panel
-        JPanel backgroundPanel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                // Draw background image
-                g.drawImage(backgroundImage.getImage(), 0, 0, getWidth(), getHeight(), this);
-            }
-        };
+        JPanel backgroundPanel = new Backround(backgroundImage);
         backgroundPanel.setLayout(null); // Use null layout for precise component positioning
         backgroundPanel.setSize(900, 600); // Set size to match frame size
         add(backgroundPanel);
