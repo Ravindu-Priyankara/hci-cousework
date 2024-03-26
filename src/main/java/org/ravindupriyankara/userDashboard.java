@@ -3,7 +3,6 @@ package org.ravindupriyankara;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Point2D;
 import java.io.IOException;
 import java.util.Objects;
 import java.awt.event.MouseAdapter;
@@ -15,7 +14,9 @@ public class userDashboard extends JFrame {
     private JPanel headerPanel, navigationPanel, mainPanel;
     private  ImageIcon backgroundImage;
     private JButton homeButton;
-    private JLabel profileLabel, username, notificationLabel, emailLabel;
+    private JLabel profileLabel, username,
+            notificationLabel, emailLabel,
+            navlogoLabel, navlogotextLabel;
     public userDashboard() {
         try {
             // Load the background image from the classpath
@@ -59,7 +60,7 @@ public class userDashboard extends JFrame {
         navigationPanel = new GradientPanel(new Color(255, 255,104), new Color(236, 130, 59));
 
 
-        navigationPanel.setLayout(new BorderLayout());
+        navigationPanel.setLayout(null);
         navigationPanel.setOpaque(true);// Make the left navigation panel transparent
         navigationPanel.setBounds(0, 0, 50,getHeight());
         navigationPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Add padding
@@ -73,7 +74,7 @@ public class userDashboard extends JFrame {
          */
 
         // Add navigation bar enabling button
-        ImageIcon navigationIcon = new ImageIcon(getClass().getResource("/test.png"));
+        ImageIcon navigationIcon = new ImageIcon(getClass().getResource("/home.png"));
         navigationIcon = resizeImageIcon(navigationIcon, 35, 35);
 
         // Add image to button
@@ -107,6 +108,7 @@ public class userDashboard extends JFrame {
                     username.setBounds(getWidth() - 150,5,60,40);
                     notificationLabel.setBounds(getWidth() - 200, 3, 50, 50);
                     emailLabel.setBounds(getWidth() - 250, 3, 50, 50);
+                    navlogotextLabel.setBounds(60,2,90,70);
                 }
             }
         });
@@ -144,6 +146,29 @@ public class userDashboard extends JFrame {
         emailLabel = new JLabel(resizeImageIcon(email, 30, 30));
         emailLabel.setBounds(getWidth() - 250, 3, 50, 50);
         headerPanel.add(emailLabel);
+
+        //navigation bar designing
+        ImageIcon navLogo = new ImageIcon(getClass().getResource("/nav-logo.png"));
+        navlogoLabel = new JLabel(resizeImageIcon(navLogo, 50,50));
+        navlogoLabel.setBounds(0, 0, 50, 50);
+        navigationPanel.add(navlogoLabel);
+
+        //load custom fonts
+        FontLoader fontLoader = new FontLoader();
+        // Replace "your_custom_font.ttf" with the path to your font file
+        fontLoader.loadCustomFont("/Copyduck.ttf");
+
+        //logo text
+        navlogotextLabel = new JLabel();
+        navlogotextLabel.setText("Senura");
+        navlogotextLabel.setFont(new Font("Copyduck", Font.BOLD, 18));
+        navlogotextLabel.setForeground(Color.BLUE);
+        //navlogotextLabel.setBackground(Color.YELLOW);
+        navlogotextLabel.setOpaque(false);
+        //navlogotextLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        navlogotextLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        navlogotextLabel.setBounds(0,0,0,0);
+        navigationPanel.add(navlogotextLabel);
 
 
         backgroundPanel.add(headerPanel);
