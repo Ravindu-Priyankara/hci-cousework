@@ -361,6 +361,28 @@ public class userDashboard extends JFrame {
             }
         });
         //logout
+        ImageIcon logoutImage = new ImageIcon(getClass().getResource("/arrow.png"));
+        logoutImage = resizeImageIcon(logoutImage, 35, 35);
+
+        //Add settings button
+        JButton logoutButton = new JButton(logoutImage);
+        logoutButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        logoutButton.setOpaque(false);
+        logoutButton.setBorder(null);
+        logoutButton.setBounds(0, 700, 50, 50);
+        logoutButton.setFocusPainted(false); // Remove the focus border
+        logoutButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(logoutButton);
+
+        //settings button function
+        logoutButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                login login = new login();
+                login.display();
+                dispose();
+            }
+        });
         //if you can add theme changer
 
 
