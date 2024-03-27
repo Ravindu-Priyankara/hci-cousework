@@ -213,9 +213,14 @@ public class userDashboard extends JFrame {
 
         //dashboard button function
         dashButton.addMouseListener(new MouseAdapter() {
+
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e); // functions here
+                //welcome card
+                Card card = new Card(null,"Welcome !!", Color.WHITE, "bageta", 20, 300,150,
+                        90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Welcome to Senura Fernitures", Color.BLACK,
+                        16, "bagets", "/welcome.png");
+                backgroundPanel.add(card);
             }
         });
 
