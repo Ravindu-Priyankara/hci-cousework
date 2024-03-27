@@ -298,6 +298,27 @@ public class userDashboard extends JFrame {
             }
         });
         //contacts us
+        ImageIcon contactImage = new ImageIcon(getClass().getResource("/contact.png"));
+        contactImage = resizeImageIcon(contactImage, 35, 35);
+
+        //Add contact button
+        JButton contactButton = new JButton(contactImage);
+        contactButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        contactButton.setOpaque(false);
+        contactButton.setBorder(null);
+        contactButton.setBounds(0, 490, 50, 50);
+        contactButton.setFocusPainted(false); // Remove the focus border
+        contactButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(contactButton);
+
+        //contact button function
+        contactButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
+        //settings
 
         //admin
         //logout
