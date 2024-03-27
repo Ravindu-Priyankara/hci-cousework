@@ -340,6 +340,26 @@ public class userDashboard extends JFrame {
             }
         });
         //admin
+        ImageIcon adminImage = new ImageIcon(getClass().getResource("/admin.png"));
+        adminImage = resizeImageIcon(adminImage, 35, 35);
+
+        //Add settings button
+        JButton adminButton = new JButton(adminImage);
+        adminButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        adminButton.setOpaque(false);
+        adminButton.setBorder(null);
+        adminButton.setBounds(0, 630, 50, 50);
+        adminButton.setFocusPainted(false); // Remove the focus border
+        adminButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(adminButton);
+
+        //settings button function
+        adminButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //logout
         //if you can add theme changer
 
