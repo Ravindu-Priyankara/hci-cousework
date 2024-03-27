@@ -277,8 +277,28 @@ public class userDashboard extends JFrame {
             }
         });
         //mails
+        ImageIcon mailImage = new ImageIcon(getClass().getResource("/gmail.png"));
+        mailImage = resizeImageIcon(mailImage, 35, 35);
+
+        //Add mail button
+        JButton mailButton = new JButton(mailImage);
+        mailButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        mailButton.setOpaque(false);
+        mailButton.setBorder(null);
+        mailButton.setBounds(0, 420, 50, 50);
+        mailButton.setFocusPainted(false); // Remove the focus border
+        mailButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(mailButton);
+
+        //mail button function
+        mailButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //contacts us
-        //settings
+
         //admin
         //logout
         //if you can add theme changer
