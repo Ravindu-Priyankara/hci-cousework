@@ -13,7 +13,6 @@ public class userDashboard extends JFrame {
 
     private JPanel headerPanel, navigationPanel, mainPanel;
     private  ImageIcon backgroundImage;
-    private JButton homeButton;
     private JLabel profileLabel, username,
             notificationLabel, emailLabel,
             navlogoLabel, navlogotextLabel,
@@ -51,6 +50,7 @@ public class userDashboard extends JFrame {
         backgroundPanel.setLayout(null); // Use null layout for precise component positioning
         backgroundPanel.setSize(900, 600); // Set size to match frame size
         add(backgroundPanel);
+
 
         // Create and add header panel
         headerPanel = new GradientPanel(new Color(255, 255, 204), new Color(255, 255, 102));
@@ -216,11 +216,26 @@ public class userDashboard extends JFrame {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                //welcome card
-                Card card = new Card(null,"Welcome !!", Color.WHITE, "bageta", 20, 300,150,
-                        90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Welcome to Senura Fernitures", Color.BLACK,
-                        16, "bagets", "/welcome.png");
-                backgroundPanel.add(card);
+                //add card to dashboard
+                dashboardCard dashboardCard = new dashboardCard(); //create card object
+
+                // enable  cards
+                dashboardCard.welcomeCard.setVisible(true);
+                dashboardCard.items.setVisible(true);
+                dashboardCard.accesories.setVisible(true);
+                dashboardCard.cost.setVisible(true);
+                dashboardCard.itemsList.setVisible(true);
+                dashboardCard.serviceList.setVisible(true);
+
+                //add cards to background
+                backgroundPanel.add(dashboardCard.welcomeCard);
+                backgroundPanel.add(dashboardCard.items);
+                backgroundPanel.add(dashboardCard.accesories);
+                backgroundPanel.add(dashboardCard.cost);
+                backgroundPanel.add(dashboardCard.itemsList);
+                backgroundPanel.add(dashboardCard.serviceList);
+
+
             }
         });
 

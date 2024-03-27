@@ -10,8 +10,8 @@ public class Card extends JPanel {
     private Color endColor;
     public Card(LayoutManager layout, String title, Color tittleForeground,
                 String tittleFont, int tittleFontSize, int cardWidth, int cardHeight,
-                int cardX, int cardY, Color startColor, Color endColor, String bodyText, Color bodytextColor,
-                int bodyfontSize, String bodytextFont, String image){
+                int cardX, int cardY, Color startColor, Color endColor, String bodyText,
+                Color bodytextColor, int bodyfontSize, String bodytextFont, String image){
         this.startColor = startColor;
         this.endColor = endColor;
 
@@ -25,6 +25,7 @@ public class Card extends JPanel {
         // Replace "your_custom_font.ttf" with the path to your font file
         fontLoader.loadCustomFont("/Copyduck.ttf");
         fontLoader.loadCustomFont("/Bronco.ttf");
+        fontLoader.loadCustomFont("/bageta.ttf");
 
         // initialise tittle
         tittleLabel = new JLabel(title);
@@ -49,7 +50,7 @@ public class Card extends JPanel {
             cardBodyLabel.setBounds(0, 50, cardWidth, 50);
         }
         //add image
-        if (!Objects.equals(image, "null")) {
+        if (!Objects.equals(image, "/test.jpg")) {
             ImageIcon cardImage = new ImageIcon(getClass().getResource(image));
             cardImage = resizeImageIcon(cardImage, 50, 50);
 
@@ -60,6 +61,7 @@ public class Card extends JPanel {
             cardButton.setBounds(120, cardY - 10, 50, 50);
             cardButton.setFocusPainted(false); // Remove the focus border
             cardButton.setBorderPainted(false);
+
 
             add(cardButton);
         }
