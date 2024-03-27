@@ -256,6 +256,26 @@ public class userDashboard extends JFrame {
             }
         });
         //notifications
+        ImageIcon notificationImage = new ImageIcon(getClass().getResource("/notification.png"));
+        notificationImage = resizeImageIcon(notificationImage, 35, 35);
+
+        //Add notification button
+        JButton notificationButton = new JButton(notificationImage);
+        notificationButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        notificationButton.setOpaque(false);
+        notificationButton.setBorder(null);
+        notificationButton.setBounds(0, 350, 50, 50);
+        notificationButton.setFocusPainted(false); // Remove the focus border
+        notificationButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(notificationButton);
+
+        //notification button function
+        notificationButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //mails
         //contacts us
         //settings
