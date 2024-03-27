@@ -340,7 +340,49 @@ public class userDashboard extends JFrame {
             }
         });
         //admin
+        ImageIcon adminImage = new ImageIcon(getClass().getResource("/admin.png"));
+        adminImage = resizeImageIcon(adminImage, 35, 35);
+
+        //Add settings button
+        JButton adminButton = new JButton(adminImage);
+        adminButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        adminButton.setOpaque(false);
+        adminButton.setBorder(null);
+        adminButton.setBounds(0, 630, 50, 50);
+        adminButton.setFocusPainted(false); // Remove the focus border
+        adminButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(adminButton);
+
+        //settings button function
+        adminButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //logout
+        ImageIcon logoutImage = new ImageIcon(getClass().getResource("/arrow.png"));
+        logoutImage = resizeImageIcon(logoutImage, 35, 35);
+
+        //Add settings button
+        JButton logoutButton = new JButton(logoutImage);
+        logoutButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        logoutButton.setOpaque(false);
+        logoutButton.setBorder(null);
+        logoutButton.setBounds(0, 700, 50, 50);
+        logoutButton.setFocusPainted(false); // Remove the focus border
+        logoutButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(logoutButton);
+
+        //settings button function
+        logoutButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                login login = new login();
+                login.display();
+                dispose();
+            }
+        });
         //if you can add theme changer
 
 
