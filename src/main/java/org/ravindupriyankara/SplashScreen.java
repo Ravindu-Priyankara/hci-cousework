@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Objects;
 
 public class SplashScreen extends JFrame{
@@ -45,7 +44,7 @@ public class SplashScreen extends JFrame{
         setBackground(Color.BLACK);
 
         // Create background panel
-        JPanel backgroundPanel = new Backround(backgroundImage);
+        JPanel backgroundPanel = new Background(backgroundImage);
         backgroundPanel.setLayout(null); // Use null layout for precise component positioning
         backgroundPanel.setSize(900, 600); // Set size to match frame size
         add(backgroundPanel);
