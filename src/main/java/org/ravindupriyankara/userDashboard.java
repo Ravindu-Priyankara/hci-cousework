@@ -16,7 +16,11 @@ public class userDashboard extends JFrame {
     private JButton homeButton;
     private JLabel profileLabel, username,
             notificationLabel, emailLabel,
-            navlogoLabel, navlogotextLabel;
+            navlogoLabel, navlogotextLabel,
+            dashboardLabel, fernitureLabel,
+            offersLabel, arrivalLabel,
+            notifiLabel, mailLabel, settingsLabel,
+            adminLabel, contactLabel, logoutLabel;
     public userDashboard() {
         try {
             // Load the background image from the classpath
@@ -43,7 +47,7 @@ public class userDashboard extends JFrame {
         setSize(screenWidth, screenHeight);
 
         // Create background panel
-        JPanel backgroundPanel = new Backround(backgroundImage);
+        JPanel backgroundPanel = new Background(backgroundImage);
         backgroundPanel.setLayout(null); // Use null layout for precise component positioning
         backgroundPanel.setSize(900, 600); // Set size to match frame size
         add(backgroundPanel);
@@ -100,6 +104,17 @@ public class userDashboard extends JFrame {
                     username.setBounds(getWidth() - 250,5,60,40);
                     notificationLabel.setBounds(getWidth() - 300, 3, 50, 50);
                     emailLabel.setBounds(getWidth() - 350, 3, 50, 50);
+                    navlogotextLabel.setBounds(60,2,90,70);
+                    dashboardLabel.setBounds(60,62,90,70);
+                    fernitureLabel.setBounds(60, 135, 90, 70);
+                    offersLabel.setBounds(60, 200, 90, 70);
+                    arrivalLabel.setBounds(60,271, 90, 70);
+                    notifiLabel.setBounds(60, 344, 90, 70);
+                    mailLabel.setBounds(60, 410, 90, 70);
+                    contactLabel.setBounds(60, 483, 90, 70);
+                    settingsLabel.setBounds(60, 550, 90, 70);
+                    adminLabel.setBounds(60, 620, 90, 70);
+                    logoutLabel.setBounds(60, 693, 90, 70);
                 }
                 else {
                     navigationPanel.setSize(50, getHeight() );
@@ -108,7 +123,6 @@ public class userDashboard extends JFrame {
                     username.setBounds(getWidth() - 150,5,60,40);
                     notificationLabel.setBounds(getWidth() - 200, 3, 50, 50);
                     emailLabel.setBounds(getWidth() - 250, 3, 50, 50);
-                    navlogotextLabel.setBounds(60,2,90,70);
                 }
             }
         });
@@ -157,6 +171,7 @@ public class userDashboard extends JFrame {
         FontLoader fontLoader = new FontLoader();
         // Replace "your_custom_font.ttf" with the path to your font file
         fontLoader.loadCustomFont("/Copyduck.ttf");
+        fontLoader.loadCustomFont("/Bronco.ttf");
 
         //logo text
         navlogotextLabel = new JLabel();
@@ -184,6 +199,18 @@ public class userDashboard extends JFrame {
         dashButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(dashButton);
 
+        //dashboard text
+        dashboardLabel = new JLabel();
+        dashboardLabel.setText("Dashboard");
+        dashboardLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        dashboardLabel.setForeground(new Color(0, 128, 255));
+        //dashboardLabel.setBackground(Color.YELLOW);
+        dashboardLabel.setOpaque(false);
+        //dashboardLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        dashboardLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        dashboardLabel.setBounds(0,0,0,0);
+        navigationPanel.add(dashboardLabel);
+
         //dashboard button function
         dashButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -206,6 +233,18 @@ public class userDashboard extends JFrame {
         fernitureButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(fernitureButton);
 
+        //ferniture text
+        fernitureLabel = new JLabel();
+        fernitureLabel.setText("Furniture");
+        fernitureLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        fernitureLabel.setForeground(new Color(0, 128, 255));
+        //fernitureLabel.setBackground(Color.YELLOW);
+        fernitureLabel.setOpaque(false);
+        //fernitureLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        fernitureLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        fernitureLabel.setBounds(0,0,0,0);
+        navigationPanel.add(fernitureLabel);
+
         //fernitures button function
         fernitureButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -226,6 +265,18 @@ public class userDashboard extends JFrame {
         offerButton.setFocusPainted(false); // Remove the focus border
         offerButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(offerButton);
+
+        //offer text
+        offersLabel = new JLabel();
+        offersLabel.setText("Offers");
+        offersLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        offersLabel.setForeground(new Color(0, 128, 255));
+        //offersLabel.setBackground(Color.YELLOW);
+        offersLabel.setOpaque(false);
+        //offersLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        offersLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        offersLabel.setBounds(0,0,0,0);
+        navigationPanel.add(offersLabel);
 
         //offers button function
         offerButton.addMouseListener(new MouseAdapter() {
@@ -248,6 +299,18 @@ public class userDashboard extends JFrame {
         arrivalButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(arrivalButton);
 
+        //arrival text
+        arrivalLabel = new JLabel();
+        arrivalLabel.setText("New");
+        arrivalLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        arrivalLabel.setForeground(new Color(255, 30, 30));
+        //arrivalLabel.setBackground(Color.YELLOW);
+        arrivalLabel.setOpaque(false);
+        //arrivalLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        arrivalLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        arrivalLabel.setBounds(0,0,0,0);
+        navigationPanel.add(arrivalLabel);
+
         //offers button function
         arrivalButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -268,6 +331,18 @@ public class userDashboard extends JFrame {
         notificationButton.setFocusPainted(false); // Remove the focus border
         notificationButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(notificationButton);
+
+        //notification text
+        notifiLabel = new JLabel();
+        notifiLabel.setText("Notification");
+        notifiLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        notifiLabel.setForeground(new Color(0, 128, 255));
+        //notifiLabel.setBackground(Color.YELLOW);
+        notifiLabel.setOpaque(false);
+        //notifiLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        notifiLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        notifiLabel.setBounds(0,0,0,0);
+        navigationPanel.add(notifiLabel);
 
         //notification button function
         notificationButton.addMouseListener(new MouseAdapter() {
@@ -290,6 +365,18 @@ public class userDashboard extends JFrame {
         mailButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(mailButton);
 
+        //mail text
+        mailLabel = new JLabel();
+        mailLabel.setText("Mails");
+        mailLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        mailLabel.setForeground(new Color(0, 128, 255));
+        //mailLabel.setBackground(Color.YELLOW);
+        mailLabel.setOpaque(false);
+        //mailLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        mailLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        mailLabel.setBounds(0,0,0,0);
+        navigationPanel.add(mailLabel);
+
         //mail button function
         mailButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -310,6 +397,18 @@ public class userDashboard extends JFrame {
         contactButton.setFocusPainted(false); // Remove the focus border
         contactButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(contactButton);
+
+        //Contact text
+        contactLabel = new JLabel();
+        contactLabel.setText("Contact");
+        contactLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        contactLabel.setForeground(new Color(0, 128, 255));
+        //contactLabel.setBackground(Color.YELLOW);
+        contactLabel.setOpaque(false);
+        //contactLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        contactLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        contactLabel.setBounds(0,0,0,0);
+        navigationPanel.add(contactLabel);
 
         //contact button function
         contactButton.addMouseListener(new MouseAdapter() {
@@ -332,6 +431,19 @@ public class userDashboard extends JFrame {
         settingButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(settingButton);
 
+        //settings text
+        settingsLabel = new JLabel();
+        settingsLabel.setText("Settings");
+        settingsLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        settingsLabel.setForeground(new Color(0, 128, 255));
+        //settingsLabel.setBackground(Color.YELLOW);
+        settingsLabel.setOpaque(false);
+        //settingsLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        settingsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        settingsLabel.setBounds(0,0,0,0);
+        navigationPanel.add(settingsLabel);
+
+
         //settings button function
         contactButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -353,6 +465,18 @@ public class userDashboard extends JFrame {
         adminButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(adminButton);
 
+        //Admin text
+        adminLabel = new JLabel();
+        adminLabel.setText("Admin");
+        adminLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        adminLabel.setForeground(new Color(0, 128, 255));
+        //adminLabel.setBackground(Color.YELLOW);
+        adminLabel.setOpaque(false);
+        //adminLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        adminLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        adminLabel.setBounds(0,0,0,0);
+        navigationPanel.add(adminLabel);
+
         //settings button function
         adminButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -364,7 +488,7 @@ public class userDashboard extends JFrame {
         ImageIcon logoutImage = new ImageIcon(getClass().getResource("/arrow.png"));
         logoutImage = resizeImageIcon(logoutImage, 35, 35);
 
-        //Add settings button
+        //Add logout button
         JButton logoutButton = new JButton(logoutImage);
         logoutButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
         logoutButton.setOpaque(false);
@@ -373,6 +497,18 @@ public class userDashboard extends JFrame {
         logoutButton.setFocusPainted(false); // Remove the focus border
         logoutButton.setBorderPainted(false); // Remove the border
         navigationPanel.add(logoutButton);
+
+        //logout text
+        logoutLabel = new JLabel();
+        logoutLabel.setText("Logout");
+        logoutLabel.setFont(new Font("Bronco", Font.BOLD, 18));
+        logoutLabel.setForeground(new Color(255, 30, 30));
+        //logoutLabel.setBackground(Color.YELLOW);
+        logoutLabel.setOpaque(false);
+        //logoutLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        logoutLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        logoutLabel.setBounds(0,0,0,0);
+        navigationPanel.add(logoutLabel);
 
         //settings button function
         logoutButton.addMouseListener(new MouseAdapter() {
@@ -384,9 +520,6 @@ public class userDashboard extends JFrame {
             }
         });
         //if you can add theme changer
-
-
-
 
 
         backgroundPanel.add(headerPanel);

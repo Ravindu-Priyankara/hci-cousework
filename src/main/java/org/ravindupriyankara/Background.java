@@ -3,9 +3,9 @@ package org.ravindupriyankara;
 import javax.swing.*;
 import java.awt.*;
 
-public class Backround extends JPanel {
+public class Background extends JPanel {
     private ImageIcon backgroundImage;// image icon type variable
-    public Backround(ImageIcon backgroundImage){// get baackround image
+    public Background(ImageIcon backgroundImage){// get baackround image
         this.backgroundImage = backgroundImage; // set background image to protected class variable
     }
 
