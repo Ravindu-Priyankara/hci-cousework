@@ -256,9 +256,89 @@ public class userDashboard extends JFrame {
             }
         });
         //notifications
+        ImageIcon notificationImage = new ImageIcon(getClass().getResource("/notification.png"));
+        notificationImage = resizeImageIcon(notificationImage, 35, 35);
+
+        //Add notification button
+        JButton notificationButton = new JButton(notificationImage);
+        notificationButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        notificationButton.setOpaque(false);
+        notificationButton.setBorder(null);
+        notificationButton.setBounds(0, 350, 50, 50);
+        notificationButton.setFocusPainted(false); // Remove the focus border
+        notificationButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(notificationButton);
+
+        //notification button function
+        notificationButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //mails
+        ImageIcon mailImage = new ImageIcon(getClass().getResource("/gmail.png"));
+        mailImage = resizeImageIcon(mailImage, 35, 35);
+
+        //Add mail button
+        JButton mailButton = new JButton(mailImage);
+        mailButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        mailButton.setOpaque(false);
+        mailButton.setBorder(null);
+        mailButton.setBounds(0, 420, 50, 50);
+        mailButton.setFocusPainted(false); // Remove the focus border
+        mailButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(mailButton);
+
+        //mail button function
+        mailButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //contacts us
+        ImageIcon contactImage = new ImageIcon(getClass().getResource("/contact.png"));
+        contactImage = resizeImageIcon(contactImage, 35, 35);
+
+        //Add contact button
+        JButton contactButton = new JButton(contactImage);
+        contactButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        contactButton.setOpaque(false);
+        contactButton.setBorder(null);
+        contactButton.setBounds(0, 490, 50, 50);
+        contactButton.setFocusPainted(false); // Remove the focus border
+        contactButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(contactButton);
+
+        //contact button function
+        contactButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //settings
+        ImageIcon settingImage = new ImageIcon(getClass().getResource("/settings.png"));
+        settingImage = resizeImageIcon(settingImage, 35, 35);
+
+        //Add settings button
+        JButton settingButton = new JButton(settingImage);
+        settingButton.setPreferredSize(new Dimension(dashImage.getIconWidth(), dashImage.getIconHeight()));// image diemantion set to button size
+        settingButton.setOpaque(false);
+        settingButton.setBorder(null);
+        settingButton.setBounds(0, 560, 50, 50);
+        settingButton.setFocusPainted(false); // Remove the focus border
+        settingButton.setBorderPainted(false); // Remove the border
+        navigationPanel.add(settingButton);
+
+        //settings button function
+        contactButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e); // functions here
+            }
+        });
         //admin
         //logout
         //if you can add theme changer
