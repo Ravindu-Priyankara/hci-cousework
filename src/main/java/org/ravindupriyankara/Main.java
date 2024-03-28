@@ -40,9 +40,14 @@ public class Main {
 
 
 
+        /*
         userDashboard userDashboard = new userDashboard();
         userDashboard.display();
 
+         */
+
+        profilePage profiePage = new profilePage();
+        profiePage.display();
 
 
 
