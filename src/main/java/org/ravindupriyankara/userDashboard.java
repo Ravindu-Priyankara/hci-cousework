@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 public class userDashboard extends JFrame {
 
     private JPanel headerPanel, navigationPanel, mainPanel;
+    private dashboardCard dashboardCard;
     private  ImageIcon backgroundImage;
     private JLabel profileLabel, username,
             notificationLabel, emailLabel,
@@ -217,7 +218,7 @@ public class userDashboard extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 //add card to dashboard
-                dashboardCard dashboardCard = new dashboardCard(); //create card object
+                dashboardCard = new dashboardCard(); //create card object
 
                 // enable  cards
                 dashboardCard.welcomeCard.setVisible(true);
@@ -269,7 +270,15 @@ public class userDashboard extends JFrame {
         fernitureButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e); // functions here
+                /* disable  cards */
+                dashboardCard.welcomeCard.setVisible(false);
+                dashboardCard.items.setVisible(false);
+                dashboardCard.accesories.setVisible(false);
+                dashboardCard.cost.setVisible(false);
+                dashboardCard.itemsList.setVisible(false);
+                dashboardCard.serviceList.setVisible(false);
+
+
             }
         });
         //offers
