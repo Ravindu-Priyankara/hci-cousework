@@ -64,7 +64,7 @@ public class MediumCards extends JPanel {
         //image1Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         //tittleLabel.setOpaque(false);
         image1Label.setHorizontalAlignment(SwingConstants.CENTER);
-        image1Label.setBounds(90, 80, 90, 50);
+        image1Label.setBounds(90, 80, 120, 50);
 
         //price icon
         JLabel priceLabel = new JLabel(price1);
@@ -73,7 +73,7 @@ public class MediumCards extends JPanel {
         priceLabel.setBorder(new RoundedBorder(15,Color.GREEN));
         //tittleLabel.setOpaque(false);
         priceLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        priceLabel.setBounds(200, 80, 90, 50);
+        priceLabel.setBounds(220, 80, 90, 50);
 
         //second row
         //image icon
@@ -95,7 +95,7 @@ public class MediumCards extends JPanel {
         //image1Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         //tittleLabel.setOpaque(false);
         image2Label.setHorizontalAlignment(SwingConstants.CENTER);
-        image2Label.setBounds(90, 160, 90, 50);
+        image2Label.setBounds(90, 160, 120, 50);
 
         //price icon
         JLabel price2Label = new JLabel(price2);
@@ -104,7 +104,7 @@ public class MediumCards extends JPanel {
         price2Label.setBorder(new RoundedBorder(15,Color.GREEN));
         //tittleLabel.setOpaque(false);
         price2Label.setHorizontalAlignment(SwingConstants.CENTER);
-        price2Label.setBounds(200, 160, 90, 50);
+        price2Label.setBounds(220, 160, 90, 50);
 
         //third row
         //image icon
@@ -126,7 +126,7 @@ public class MediumCards extends JPanel {
         //image1Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         //tittleLabel.setOpaque(false);
         image3Label.setHorizontalAlignment(SwingConstants.CENTER);
-        image3Label.setBounds(90, 240, 90, 50);
+        image3Label.setBounds(90, 240, 120, 50);
 
         //price icon
         JLabel price3Label = new JLabel(price3);
@@ -135,7 +135,7 @@ public class MediumCards extends JPanel {
         price3Label.setBorder(new RoundedBorder(15,Color.GREEN));
         //tittleLabel.setOpaque(false);
         price3Label.setHorizontalAlignment(SwingConstants.CENTER);
-        price3Label.setBounds(200, 240, 95, 50);
+        price3Label.setBounds(220, 240, 95, 50);
 
         //fouth raw
         //image icon
@@ -157,7 +157,7 @@ public class MediumCards extends JPanel {
         //image1Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         //tittleLabel.setOpaque(false);
         image4Label.setHorizontalAlignment(SwingConstants.CENTER);
-        image4Label.setBounds(90, 320, 90, 50);
+        image4Label.setBounds(90, 320, 120, 50);
 
         //price icon
         JLabel price4Label = new JLabel(price4);
@@ -166,7 +166,7 @@ public class MediumCards extends JPanel {
         price4Label.setBorder(new RoundedBorder(15,Color.GREEN));
         //tittleLabel.setOpaque(false);
         price4Label.setHorizontalAlignment(SwingConstants.CENTER);
-        price4Label.setBounds(200, 320, 95, 50);
+        price4Label.setBounds(220, 320, 95, 50);
 
         //fifth row
         //image icon
@@ -185,7 +185,7 @@ public class MediumCards extends JPanel {
         JLabel image5Label = new JLabel(item5);
         image5Label.setFont(new Font(item1Font, Font.BOLD, item1FontSize));
         image5Label.setForeground(item1Forground);
-        //image1Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        //image5Label.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         //tittleLabel.setOpaque(false);
         image5Label.setHorizontalAlignment(SwingConstants.CENTER);
         image5Label.setBounds(90, 400, 120, 50);
@@ -197,7 +197,7 @@ public class MediumCards extends JPanel {
         price5Label.setBorder(new RoundedBorder(15,Color.BLUE));
         //tittleLabel.setOpaque(false);
         price5Label.setHorizontalAlignment(SwingConstants.CENTER);
-        price5Label.setBounds(200, 400, 95, 50);
+        price5Label.setBounds(220, 400, 95, 50);
 
 
         add(tittleLabel);

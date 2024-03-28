@@ -29,8 +29,8 @@ public class dashboardCard extends JPanel {
                 "/sofa.png", "Sofa Sets", "2500 $", "/cupboard.png", "Cupboards ", "3000 $", "/bed.png", "Bed", "3500 $");
 
         serviceList = new MediumCards(null, 350, 500, 1060, 300, "Our Services !", 20, "", Color.WHITE, "/delivery.png",
-                new Color(255, 0, 255), new Color(255, 255, 102), "Fast Delivary", "bageta", 16, Color.BLACK, "0 $", Color.YELLOW, "/desk.png", "Desk", "1500 $",
-                "/sofa.png", "Sofa Sets", "2500 $", "/cupboard.png", "Cupboards ", "3000 $", "/bed.png", "Bed", "3500 $");
+                new Color(255, 0, 255), new Color(255, 255, 102), "Fast Delivary", "bageta", 14, Color.BLACK, "free", Color.YELLOW, "/shoping.png", "custom materiels", "free",
+                "/rentals.png", "Rental Option", "custom", "/cupboard.png", "Cupboards ", "3000 $", "/help.png", "help", "3500 $");
 
 
 
