@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 public class userDashboard extends JFrame {
 
     private JPanel headerPanel, navigationPanel, mainPanel;
+    private dashboardCard dashboardCard;
     private  ImageIcon backgroundImage;
     private JLabel profileLabel, username,
             notificationLabel, emailLabel,
@@ -216,26 +217,27 @@ public class userDashboard extends JFrame {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                //add card to dashboard
-                dashboardCard dashboardCard = new dashboardCard(); //create card object
+                SwingUtilities.invokeLater(() -> {
+                    //add card to dashboard
+                    dashboardCard = new dashboardCard(); //create card object
 
-                // enable  cards
-                dashboardCard.welcomeCard.setVisible(true);
-                dashboardCard.items.setVisible(true);
-                dashboardCard.accesories.setVisible(true);
-                dashboardCard.cost.setVisible(true);
-                dashboardCard.itemsList.setVisible(true);
-                dashboardCard.serviceList.setVisible(true);
+                    // enable  cards
+                    dashboardCard.welcomeCard.setVisible(true);
+                    dashboardCard.items.setVisible(true);
+                    dashboardCard.accesories.setVisible(true);
+                    dashboardCard.cost.setVisible(true);
+                    dashboardCard.itemsList.setVisible(true);
+                    dashboardCard.serviceList.setVisible(true);
 
-                //add cards to background
-                backgroundPanel.add(dashboardCard.welcomeCard);
-                backgroundPanel.add(dashboardCard.items);
-                backgroundPanel.add(dashboardCard.accesories);
-                backgroundPanel.add(dashboardCard.cost);
-                backgroundPanel.add(dashboardCard.itemsList);
-                backgroundPanel.add(dashboardCard.serviceList);
+                    //add cards to background
+                    backgroundPanel.add(dashboardCard.welcomeCard);
+                    backgroundPanel.add(dashboardCard.items);
+                    backgroundPanel.add(dashboardCard.accesories);
+                    backgroundPanel.add(dashboardCard.cost);
+                    backgroundPanel.add(dashboardCard.itemsList);
+                    backgroundPanel.add(dashboardCard.serviceList);
 
-
+                });
             }
         });
 
@@ -269,7 +271,29 @@ public class userDashboard extends JFrame {
         fernitureButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e); // functions here
+                /* disable  cards */
+                SwingUtilities.invokeLater(() -> {
+                    dashboardCard.welcomeCard.setVisible(false);
+                    dashboardCard.items.setVisible(false);
+                    dashboardCard.accesories.setVisible(false);
+                    dashboardCard.cost.setVisible(false);
+                    dashboardCard.itemsList.setVisible(false);
+                    dashboardCard.serviceList.setVisible(false);
+
+                    // enable cards
+                    dashboardCard.chair1.setVisible(true);
+
+                    //add card to background panel
+                    backgroundPanel.add(dashboardCard.welcomeCard);
+                    backgroundPanel.add(dashboardCard.items);
+                    backgroundPanel.add(dashboardCard.accesories);
+                    backgroundPanel.add(dashboardCard.cost);
+                    backgroundPanel.add(dashboardCard.itemsList);
+                    backgroundPanel.add(dashboardCard.serviceList);
+                    backgroundPanel.add(dashboardCard.chair1);
+                });
+
+
             }
         });
         //offers
