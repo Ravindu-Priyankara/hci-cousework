@@ -6,6 +6,7 @@ import java.awt.*;
 public class dashboardCard extends JPanel {
     public Card welcomeCard, items, accesories, cost;
     public MediumCards itemsList, serviceList;
+    public FurnitureCards chair1;
     public dashboardCard() {
 
         welcomeCard = new Card(null, "Welcome !!", Color.WHITE, "", 20, 300, 150,
@@ -32,6 +33,10 @@ public class dashboardCard extends JPanel {
                 new Color(255, 0, 255), new Color(255, 255, 102), "Fast Delivary", "bageta", 14, Color.BLACK, "free", Color.YELLOW, "/shoping.png", "custom materiels", "free",
                 "/rentals.png", "Rental Option", "custom", "/cupboard.png", "Cupboards ", "3000 $", "/help.png", "help", "3500 $");
 
+        chair1 = new FurnitureCards(null, "Wood Chair", Color.WHITE, "", 19, 300, 400,
+                90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Wood chair", Color.BLACK, 14,
+                "bageta", "/welcome.png");
+
 
 
         //disable cards
@@ -41,5 +46,6 @@ public class dashboardCard extends JPanel {
         cost.setVisible(false);
         itemsList.setVisible(false);
         serviceList.setVisible(false);
+        chair1.setVisible(false);
     }
 }
