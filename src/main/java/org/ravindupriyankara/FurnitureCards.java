@@ -86,7 +86,7 @@ public class FurnitureCards extends JPanel {
 
         buyButton.addActionListener(e -> {
             SwingUtilities.invokeLater(() ->{
-                ObjectDesigner objectDesigner = new ObjectDesigner(title);
+                ObjectDesigner objectDesigner = new ObjectDesigner(title, image);
                 objectDesigner.display();
 
                 //close previous window
