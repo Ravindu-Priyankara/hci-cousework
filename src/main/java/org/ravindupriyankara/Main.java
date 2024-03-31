@@ -40,8 +40,13 @@ public class Main {
 
 
 
+        /*
         userDashboard userDashboard = new userDashboard();
         userDashboard.display();
+
+         */
+        ObjectDesigner objectDesigner = new ObjectDesigner("Wood Chair", "/wood-chair.png");
+        objectDesigner.display();
 
 
 
