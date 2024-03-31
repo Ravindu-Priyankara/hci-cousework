@@ -2,6 +2,8 @@ package org.ravindupriyankara;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Objects;
 
 public class FurnitureCards extends JPanel {
@@ -81,6 +83,20 @@ public class FurnitureCards extends JPanel {
         buyButton.setFocusPainted(false); // Remove focus indication
         buyButton.setOpaque(false); // Ensure button is not opaque
         buyButton.setBorder(new RoundedBorder(15,Color.MAGENTA));
+
+        buyButton.addActionListener(e -> {
+            SwingUtilities.invokeLater(() ->{
+                ObjectDesigner objectDesigner = new ObjectDesigner(title);
+                objectDesigner.display();
+
+                //close previous window
+                Window parentWindow = SwingUtilities.getWindowAncestor(this);
+                if (parentWindow != null) {
+                    // Close the parent window or dialog
+                    parentWindow.dispose();
+                }
+            });
+        });
 
 
         add(cardBodyLabel);
