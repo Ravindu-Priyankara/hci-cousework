@@ -5,7 +5,8 @@ import java.awt.*;
 import java.util.Objects;
 
 public class FurnitureCards extends JPanel {
-    private JLabel tittleLabel,cardBodyLabel;
+    private JLabel tittleLabel;
+    private JTextArea cardBodyLabel;
     private Color startColor;
     private Color endColor;
     public FurnitureCards(LayoutManager layout, String title, Color tittleForeground,
@@ -40,34 +41,51 @@ public class FurnitureCards extends JPanel {
             tittleLabel.setBounds(0, 5, cardWidth, 50);
         }
         //Body label
-        cardBodyLabel = new JLabel(bodyText);
+        cardBodyLabel = new JTextArea(bodyText);
         cardBodyLabel.setFont(new Font(bodytextFont, Font.BOLD, bodyfontSize));
         cardBodyLabel.setForeground(bodytextColor);
         //cardBodyLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        cardBodyLabel.setEditable(false);
+        cardBodyLabel.setLineWrap(true); // Enable text wrapping
+        cardBodyLabel.setWrapStyleWord(true); // Wrap at word boundaries
+        cardBodyLabel.setOpaque(false); // Make the background transparent
         //tittleLabel.setOpaque(false);
-        cardBodyLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        //cardBodyLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         if (layout == null) {
-            cardBodyLabel.setBounds(0, 50, cardWidth, 50);
+            cardBodyLabel.setBounds(10, 100, cardWidth -20 , 100);
         }
         //add image
         if (!Objects.equals(image, "/test.jpg")) {
             ImageIcon cardImage = new ImageIcon(getClass().getResource(image));
-            cardImage = resizeImageIcon(cardImage, 50, 50);
+            cardImage = resizeImageIcon(cardImage, 100, 100);
 
             JButton cardButton = new JButton(cardImage);
             cardButton.setPreferredSize(new Dimension(cardImage.getIconWidth(), cardImage.getIconHeight()));// image diemantion set to button size
             cardButton.setOpaque(false);
             cardButton.setBorder(null);
-            cardButton.setBounds(120, cardY - 10, 50, 50);
+            cardButton.setBounds(100, 210, 100, 100);
             cardButton.setFocusPainted(false); // Remove the focus border
             cardButton.setBorderPainted(false);
 
 
             add(cardButton);
         }
+
+        //buy button
+        JButton buyButton = new JButton("Buy Now");
+        buyButton.setBounds(100, 330, 100, 40);
+        buyButton.setBackground(Color.MAGENTA); // Set button background color
+        buyButton.setForeground(Color.RED); // Set button text color
+        buyButton.setBorder(BorderFactory.createEmptyBorder(10, 25, 10, 25)); // Add padding to the button
+        buyButton.setFocusPainted(false); // Remove focus indication
+        buyButton.setOpaque(false); // Ensure button is not opaque
+        buyButton.setBorder(new RoundedBorder(15,Color.MAGENTA));
+
+
         add(cardBodyLabel);
         add(tittleLabel);
+        add(buyButton);
 
     }
     @Override

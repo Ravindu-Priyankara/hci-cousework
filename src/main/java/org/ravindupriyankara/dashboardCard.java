@@ -34,8 +34,8 @@ public class dashboardCard extends JPanel {
                 "/rentals.png", "Rental Option", "custom", "/cupboard.png", "Cupboards ", "3000 $", "/help.png", "help", "3500 $");
 
         chair1 = new FurnitureCards(null, "Wood Chair", Color.WHITE, "", 19, 300, 400,
-                90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Wood chair", Color.BLACK, 14,
-                "bageta", "/welcome.png");
+                90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
+                "bageta", "/wood-chair.png");
 
 
 
