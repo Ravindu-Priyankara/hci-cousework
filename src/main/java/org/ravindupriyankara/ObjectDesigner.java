@@ -99,7 +99,7 @@ public class ObjectDesigner extends JFrame {
         //large.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         large.setBounds(470, 150, 150, 50);
 
-        
+
 
 
         // add radio button to size group
