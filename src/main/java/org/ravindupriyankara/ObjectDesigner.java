@@ -99,6 +99,25 @@ public class ObjectDesigner extends JFrame {
         //large.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         large.setBounds(470, 150, 150, 50);
 
+        //room color
+        JLabel roomColor = new JLabel("Room Color: ");
+        roomColor.setFont(new Font("Copyduck", Font.BOLD, 20));
+        roomColor.setForeground(Color.WHITE);
+        //roomColor.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        roomColor.setBounds(50, 200, 150, 50);
+
+        ImageIcon colorPicker = new ImageIcon(getClass().getResource("/pen.png"));
+        colorPicker = resizeImageIcon(colorPicker, 25, 25);
+
+        JButton colorPickerButton = new JButton(colorPicker);
+        colorPickerButton.setPreferredSize(new Dimension(100, 50));
+        colorPickerButton.setOpaque(false);
+        //colorPickerButton.setBorder(BorderFactory.createEmptyBorder(10, 25, 10, 25));
+        colorPickerButton.setBorder(new RoundedBorder(12, Color.WHITE));
+        colorPickerButton.setFocusPainted(false); // Remove the focus border
+        colorPickerButton.setBorderPainted(true);
+        colorPickerButton.setBounds(250, 200, 50, 50);
+
 
 
 
@@ -111,9 +130,11 @@ public class ObjectDesigner extends JFrame {
         //backgroundPanel.add(objectButton); //image button add to background
         backgroundPanel.add(tittleLabel); //title label add to background
         backgroundPanel.add(roomType);// add room type to background panel
-        backgroundPanel.add(small); //small check box
-        backgroundPanel.add(medium); // medium check box
-        backgroundPanel.add(large);
+        backgroundPanel.add(small); //small radio button
+        backgroundPanel.add(medium); // medium radio button
+        backgroundPanel.add(large);// large radio button
+        backgroundPanel.add(roomColor); // set room color text
+        backgroundPanel.add(colorPickerButton); // add color picker
     }
 
     public void display(){
