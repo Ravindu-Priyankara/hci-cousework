@@ -72,30 +72,48 @@ public class ObjectDesigner extends JFrame {
         JLabel roomType = new JLabel("Room Type: ");
         roomType.setFont(new Font("Copyduck", Font.BOLD, 20));
         roomType.setForeground(Color.WHITE);
-        roomType.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        //roomType.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         roomType.setBounds(50, 150, 150, 50);
 
+        // make room type group
+        ButtonGroup sizeGroup = new ButtonGroup(); // Group to ensure only one option can be selected
 
-        /*
-        ImageIcon objectImage = new ImageIcon(Objects.requireNonNull(getClass().getResource(image)));
-        objectImage = resizeImageIcon(objectImage, 100, 100);
+        //small radio button
+        JCheckBox small = new JCheckBox("Small");
+        small.setFont(new Font("Copyduck", Font.PLAIN, 17));
+        small.setForeground(Color.BLACK);
+        //small.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        small.setBounds(250, 150, 150, 50);
 
-        JButton objectButton = new JButton(objectImage);
-        objectButton.setPreferredSize(new Dimension(objectImage.getIconWidth(), objectImage.getIconHeight()));// image diemantion set to button size
-        objectButton.setOpaque(false);
-        objectButton.setBorder(new RoundedBorder(12, Color.BLACK));
-        objectButton.setBounds(200, 100, 100, 100);
-        objectButton.setFocusPainted(false); // Remove the focus border
-        objectButton.setBorderPainted(true);
+        //medium radio button
+        JCheckBox medium = new JCheckBox("Medium");
+        medium.setFont(new Font("Copyduck", Font.PLAIN, 17));
+        medium.setForeground(Color.BLACK);
+        //medium.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        medium.setBounds(350, 150, 150, 50);
 
-         */
+        //large radio button
+        JCheckBox large = new JCheckBox("Large");
+        large.setFont(new Font("Copyduck", Font.PLAIN, 17));
+        large.setForeground(Color.BLACK);
+        //large.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        large.setBounds(470, 150, 150, 50);
+
+        
 
 
+        // add radio button to size group
+        sizeGroup.add(small); // Add each radio button to the button group
+        sizeGroup.add(medium);
+        sizeGroup.add(large);
 
 
         //backgroundPanel.add(objectButton); //image button add to background
         backgroundPanel.add(tittleLabel); //title label add to background
         backgroundPanel.add(roomType);// add room type to background panel
+        backgroundPanel.add(small); //small check box
+        backgroundPanel.add(medium); // medium check box
+        backgroundPanel.add(large);
     }
 
     public void display(){
