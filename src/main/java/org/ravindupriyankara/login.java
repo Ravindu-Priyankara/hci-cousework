@@ -68,7 +68,6 @@ public class login extends JFrame {
         backgroundPanel.add(usernameField);
 
 
-
         // Create password label
         JLabel passwordLabel = new JLabel("Password:");
         passwordLabel.setForeground(Color.WHITE); // Set text color to white
@@ -86,7 +85,6 @@ public class login extends JFrame {
         passwordField.setBounds(fieldX, fieldY, fieldWidth, fieldHeight);
         setFieldStyle(passwordField); // Apply custom field style
         backgroundPanel.add(passwordField);
-
 
 
         // Create login button
