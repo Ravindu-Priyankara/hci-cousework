@@ -6,7 +6,7 @@ import java.awt.*;
 public class dashboardCard extends JPanel {
     public Card welcomeCard, items, accesories, cost;
     public MediumCards itemsList, serviceList;
-    public FurnitureCards chair1;
+    public FurnitureCards chair1, desk;
     public dashboardCard() {
 
         welcomeCard = new Card(null, "Welcome !!", Color.WHITE, "", 20, 300, 150,
@@ -36,6 +36,9 @@ public class dashboardCard extends JPanel {
         chair1 = new FurnitureCards(null, "Wood Chair", Color.WHITE, "", 19, 300, 400,
                 90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
                 "bageta", "/wood-chair.png");
+        desk = new FurnitureCards(null, "Wood desk", Color.WHITE, "", 19, 300, 400,
+                450, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
+                "bageta", "/desk2.png");
 
 
 
@@ -47,5 +50,6 @@ public class dashboardCard extends JPanel {
         itemsList.setVisible(false);
         serviceList.setVisible(false);
         chair1.setVisible(false);
+        desk.setVisible(false);
     }
 }
