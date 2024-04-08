@@ -174,6 +174,18 @@ public class ObjectDesigner extends JFrame {
         button3d.setFocusPainted(false); // Remove the focus border
         button3d.setBorderPainted(false);
         button3d.setBounds(350, 270, 50, 50);
+
+        button2d.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                SwingUtilities.invokeLater(() -> {
+                    twoDobject twoDobject = new twoDobject();
+                    twoDobject.display();
+                    dispose();
+                });
+            }
+        });
+
         //buy button
         ImageIcon buyImage = new ImageIcon(getClass().getResource("/buy.png"));
         buyImage = resizeImageIcon(buyImage, 50, 50);

@@ -2,6 +2,8 @@ package org.ravindupriyankara;
 
 public class Main {
     public static void main(String[] args) {
+
+
         /*
         //create object for splashscreen
         SplashScreen splashScreen = new SplashScreen();
@@ -40,12 +42,31 @@ public class Main {
 
 
 
-        /*
+
+
+
+
+
+
+
+
+
         userDashboard userDashboard = new userDashboard();
-        userDashboard.display();*/
-      
-      ObjectDesigner objectDesigner = new ObjectDesigner("Wood Chair", "/wood-chair.png");
+        userDashboard.display();
+
+
+
+
+
+        /*
+        ObjectDesigner objectDesigner = new ObjectDesigner("Wood Chair", "/wood-chair.png");
         objectDesigner.display();
+
+         */
+
+
+
+
 
 
 
