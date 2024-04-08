@@ -9,16 +9,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OBJViewer extends JPanel {
+public class OBJViewer2 extends JPanel {
 
     private List<Point3D> vertices;
     private double lightX = 1.0; // X-coordinate of the light source
     private double lightY = 1.0; // Y-coordinate of the light source
     private double lightZ = 1.0; // Z-coordinate of the light source
 
-    public OBJViewer() {
+    public OBJViewer2() {
         vertices = new ArrayList<>();
-        loadModel("/Users/ravindupriyankara/Home/hci-cousework/src/main/resources/wood.obj"); // Change "model.obj" to the path of your 3D model file
+        loadModel("/Users/ravindupriyankara/Home/hci-cousework/src/main/resources/desk2.obj"); // Change "model.obj" to the path of your 3D model file
     }
 
     @Override

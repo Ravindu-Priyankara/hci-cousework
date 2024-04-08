@@ -3,8 +3,8 @@ package org.ravindupriyankara;
 import javax.swing.*;
 import java.awt.*;
 
-public class twoDobject extends JFrame {
-    public twoDobject() throws HeadlessException {
+public class twoDobject2 extends JFrame {
+    public twoDobject2() throws HeadlessException {
         initializeUI();
     }
 

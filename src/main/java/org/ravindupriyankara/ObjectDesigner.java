@@ -179,9 +179,15 @@ public class ObjectDesigner extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 SwingUtilities.invokeLater(() -> {
-                    twoDobject twoDobject = new twoDobject();
-                    twoDobject.display();
-                    dispose();
+                    if (object == "Wood Chair") {
+                        twoDobject twoDobject = new twoDobject();
+                        twoDobject.display();
+                        dispose();
+                    } else if (object == "Wood desk") {
+                        twoDobject2 twoDobject2 = new twoDobject2();
+                        twoDobject2.display();
+                        dispose();
+                    }
                 });
             }
         });
