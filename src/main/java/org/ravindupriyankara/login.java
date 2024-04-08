@@ -123,7 +123,10 @@ public class login extends JFrame {
         cancel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                System.exit(0);
+                //System.exit(0); //System exit code
+                userDashboard userDashboard = new userDashboard();
+                userDashboard.display();
+                dispose();
             }
         });
 
