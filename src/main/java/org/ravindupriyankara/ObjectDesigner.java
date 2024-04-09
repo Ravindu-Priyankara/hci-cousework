@@ -180,7 +180,7 @@ public class ObjectDesigner extends JFrame {
                 SwingUtilities.invokeLater(() -> {
                     threeDPlayer player = new threeDPlayer();
                     player.setVisible(true);
-                    dispose();
+                    //dispose();
                 });
             }
         });
@@ -192,21 +192,21 @@ public class ObjectDesigner extends JFrame {
                     if (object == "Wood Chair") {
                         twoDobject twoDobject = new twoDobject();
                         twoDobject.display();
-                        dispose();
+                        //dispose();
                     } else if (object == "Wood desk") {
                         //twoDobject2 twoDobject2 = new twoDobject2();
                         //twoDobject2.display();
                         desk desk = new desk();
                         desk.display();
-                        dispose();
+                        //dispose();
                     }else if (object == "Gaming Chair"){
                         gaming gaming = new gaming();
                         gaming.display();
-                        dispose();
+                        //dispose();
                     } else if (object == "Bed") {
                         Bed bed = new Bed();
                         bed.display();
-                        dispose();
+                        //dispose();
                     }
                 });
             }

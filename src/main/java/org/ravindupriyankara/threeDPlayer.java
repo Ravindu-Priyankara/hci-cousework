@@ -9,7 +9,7 @@ public class threeDPlayer extends JFrame {
 
     public threeDPlayer() {
         setTitle("Video Player");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(640, 480);
         setLocationRelativeTo(null);
 

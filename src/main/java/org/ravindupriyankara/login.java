@@ -120,12 +120,19 @@ public class login extends JFrame {
         backgroundPanel.add(cancel);
 
         // Add cancel button event listner
-        cancel.addMouseListener(new MouseAdapter() {
+        loginButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 //System.exit(0); //System exit code
                 userDashboard userDashboard = new userDashboard();
                 userDashboard.display();
+                dispose();
+            }
+        });
+
+        cancel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
                 dispose();
             }
         });
