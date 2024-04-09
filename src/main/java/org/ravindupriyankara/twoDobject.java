@@ -17,9 +17,10 @@ public class twoDobject extends JFrame {
         setTitle("Test 2d Object");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        OBJViewer2 model3DPanel = new OBJViewer2();
+        OBJViewer model3DPanel = new OBJViewer();
         model3DPanel.setBackground(Color.WHITE); // Set background color to white
-        add(model3DPanel);
+
+
 
     }
 
