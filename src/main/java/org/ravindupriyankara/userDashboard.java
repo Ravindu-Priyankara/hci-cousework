@@ -283,6 +283,8 @@ public class userDashboard extends JFrame {
                     // enable cards
                     dashboardCard.chair1.setVisible(true);
                     dashboardCard.desk.setVisible(true);
+                    dashboardCard.gaming.setVisible(true);
+                    dashboardCard.bed.setVisible(true);
 
                     //add card to background panel
                     backgroundPanel.add(dashboardCard.welcomeCard);
@@ -293,6 +295,8 @@ public class userDashboard extends JFrame {
                     backgroundPanel.add(dashboardCard.serviceList);
                     backgroundPanel.add(dashboardCard.chair1);
                     backgroundPanel.add(dashboardCard.desk);
+                    backgroundPanel.add(dashboardCard.gaming);
+                    backgroundPanel.add(dashboardCard.bed);
                 });
 
 
