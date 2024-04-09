@@ -6,7 +6,7 @@ import java.awt.*;
 public class dashboardCard extends JPanel {
     public Card welcomeCard, items, accesories, cost;
     public MediumCards itemsList, serviceList;
-    public FurnitureCards chair1, desk;
+    public FurnitureCards chair1, desk, gaming, bed;
     public dashboardCard() {
 
         welcomeCard = new Card(null, "Welcome !!", Color.WHITE, "", 20, 300, 150,
@@ -37,8 +37,14 @@ public class dashboardCard extends JPanel {
                 90, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
                 "bageta", "/wood-chair.png");
         desk = new FurnitureCards(null, "Wood desk", Color.WHITE, "", 19, 300, 400,
-                450, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
+                440, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
                 "bageta", "/desk2.png");
+        gaming = new FurnitureCards(null, "Gaming Chair", Color.WHITE, "", 19, 300, 400,
+                780, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
+                "bageta", "/gamming1.png");
+        bed = new FurnitureCards(null, "Bed", Color.WHITE, "", 19, 300, 400,
+                1120, 100, new Color(255, 0, 255), new Color(255, 255, 102), "Elevate your space with our timeless wood chairs. Crafted with precision and style, they offer durability and elegance in every seat.", Color.BLACK, 14,
+                "bageta", "/bed4.png");
 
 
 
@@ -51,5 +57,7 @@ public class dashboardCard extends JPanel {
         serviceList.setVisible(false);
         chair1.setVisible(false);
         desk.setVisible(false);
+        gaming.setVisible(false);
+        bed.setVisible(false);
     }
 }

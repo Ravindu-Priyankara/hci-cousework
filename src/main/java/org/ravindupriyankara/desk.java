@@ -23,7 +23,8 @@ public class desk extends JFrame {
         setLocationRelativeTo(null);
 
         //hide tittle bar
-        setUndecorated(true);
+        //setUndecorated(true);
+
 
         // Create background panel
         JPanel backgroundPanel = new Background(backgroundImage);

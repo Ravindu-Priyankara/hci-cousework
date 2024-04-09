@@ -174,6 +174,16 @@ public class ObjectDesigner extends JFrame {
         button3d.setFocusPainted(false); // Remove the focus border
         button3d.setBorderPainted(false);
         button3d.setBounds(350, 270, 50, 50);
+        button3d.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                SwingUtilities.invokeLater(() -> {
+                    threeDPlayer player = new threeDPlayer();
+                    player.setVisible(true);
+                    dispose();
+                });
+            }
+        });
 
         button2d.addMouseListener(new MouseAdapter() {
             @Override
@@ -184,8 +194,18 @@ public class ObjectDesigner extends JFrame {
                         twoDobject.display();
                         dispose();
                     } else if (object == "Wood desk") {
-                        twoDobject2 twoDobject2 = new twoDobject2();
-                        twoDobject2.display();
+                        //twoDobject2 twoDobject2 = new twoDobject2();
+                        //twoDobject2.display();
+                        desk desk = new desk();
+                        desk.display();
+                        dispose();
+                    }else if (object == "Gaming Chair"){
+                        gaming gaming = new gaming();
+                        gaming.display();
+                        dispose();
+                    } else if (object == "Bed") {
+                        Bed bed = new Bed();
+                        bed.display();
                         dispose();
                     }
                 });
