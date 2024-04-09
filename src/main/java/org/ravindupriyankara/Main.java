@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        /*
+        
         //create object for splashscreen
         SplashScreen splashScreen = new SplashScreen();
         //call display function inside splashscreen
@@ -37,7 +37,7 @@ public class Main {
         login login = new login();// create class object
         login.display();//call login class after close splashScreen
 
-         */
+         
 
 
 
@@ -49,11 +49,11 @@ public class Main {
 
 
 
-
+        /*
 
         userDashboard userDashboard = new userDashboard();
         userDashboard.display();
-
+        */
 
 
 
